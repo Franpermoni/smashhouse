@@ -74,14 +74,12 @@ img {
   background: none;
   border: none;
   cursor: pointer;
-  color: #ffffff;
   color: #f0ece8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
   border-radius: 8px;
+  font-size: 24px !important;
 }
 
 .cart-icon-btn:hover {
