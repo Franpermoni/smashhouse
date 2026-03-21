@@ -113,7 +113,6 @@ p {
     font-size: 15px;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0.3s ease;
 }
 
 .btn-1:hover {
@@ -319,16 +318,17 @@ h2 {
 
 /* 5. Barra Final de Copyright (Centrada y Limpia) */
 .footercopy {
-    margin-top: 40px;
-    padding: 20px 0;
+    margin-top: 20px;
+    padding: 10px 0 5px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
     text-align: center;
-    font-size: 13px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.7); /* Blanco suave */
 }
 
 .footercopy p {
     margin: 0;
+    line-height: 1.2;
 }
 
 @media screen and (max-width: 768px) {
