@@ -55,6 +55,7 @@ img {
   width: 45px;
   height: 45px;
   object-fit: contain;
+  max-width: 45px;
 }
 
 .menu .navbar ul li {
