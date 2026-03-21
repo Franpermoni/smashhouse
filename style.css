@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #040100;
+}
+ 
+img {
+    width: 100%;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 150px 0 0 0; 
+}
+
+.menu  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: 15px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #E22717;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    display: block;
+    padding:  20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #E22717;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 30px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+.header-txt h1 {
+    font-size: 100px;
+    line-height: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+p {
+    color: #d0d0d0;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-1 {
+    display: inline-block;
+    text-transform: none !important;
+    padding: 13px 35px;
+    background-color: #E22717;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: #ffffff;
+    color: #E22717;
+}
+
+.header-img {
+    text-align: right;
+    flex-basis: 50%;
+}
+
+.header-img img {
+    width: 850px;
+}
+
+
+
+h2 {
+    font-size: 40px;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+
+.general {
+    padding: 50px 0;
+}
+
+.general-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general-txt {
+    flex-basis: 50%;
+    margin: 0 50px;
+
+}
+
+.general-img {
+    text-align: center;
+    flex-basis: 50%;
+}
+
+.app {
+    padding: 50px 0;
+   
+}
+
+.app-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-img {
+    text-align: center;
+    flex-basis: 50%;
+}
+
+.app-img img {
+    width: 300px;
+}
+
+.burgaspng:hover {
+   transform: scale(1.2);
+}
+
+.app-txt {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.app-icons img {
+    width: 150px;
+}
+
+
+.post-intro {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 140px 0 !important;
+    
+}
+
+.burgers, .nosotros-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    color: white;
+    flex: 1;
+} 
+
+.burgers h2, .nosotros-information h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.burgers-img, .nosotrospng {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    max-width: 500px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.ocultarproductos {
+    display: none;
+}
+
+.contact {
+    padding: 50px 0;
+    display: flex;
+}
+
+.Contact-content {
+   text-align: center;
+   justify-content: space-around;
+   padding: 0 20px;
+   flex-direction: column;
+   align-items: flex-start;
+   text-align: center;
+   flex-wrap: wrap;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 60px 0;
+    background-color: #631913;
+    color: #ffffff;
+}   
+
+.footercopy {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #631913;
+    color: #ffffff;
+    text-align: left;
+    font-size: 12px;
+}
+
+.footercopy p {
+   color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 100px;
+    padding: 0;;
+    width: 100%;
+}
+
+
+.link {
+    flex: 1; 
+    text-align: center;
+    padding:  0 20px 20px;
+}
+
+.link ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    
+}
+
+
+.link h3 {
+    margin-top: 10px;
+    line-height: 1;
+    height: 10px;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.redes {
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    padding:  0;
+    gap: 35px;
+}
+
+.redes ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 15px;
+
+}
+
+.redes a {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+    text-decoration: none;
+    color:#040100;
+    margin-bottom: 10px;
+}
+
+.redes-title {
+    margin-top: 0px;
+    line-height: 1;
+    height: 10px;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.contacto h3 {
+    margin-top: 15px;
+    align-items: center;
+    font-size: 25px;
+    color: #ffffff;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contacto p {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    font-size: 16px;
+    color: #040100;
+
+}
+
+.social-icon {
+    width: 40px;
+    margin-right: 0px;
+    transition: transform 0.3s ease;
+    
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+.link a {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+    text-decoration: none;
+    color:#040100;
+    margin-bottom: 10px;
+    
+}
+
+.link a:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* Evita que el diseño se vea "lejos" o con zoom out */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+   /* 1. BAJAR TODO EL HEADER (Para que no choque con el logo) */
+    .header-txt {
+        margin-top: 80px !important;    /* Espacio hacia arriba (el menú) */
+        margin-bottom: 60px !important; /* Espacio hacia abajo (el contacto) */
+        display: block !important;
+        font-size: 28px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* SEPARACIÓN INTERNA (Título vs Párrafo/Contacto) */
+    h1, h2 {
+        font-size: 28px !important;
+        margin: 0 0 20px 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* 1. Contenedores: Forzamos el flujo vertical */
+    .container, 
+    .footer-content, 
+    .information-content, 
+    .contact-content {
+        width: 100% !important;
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. Las Tarjetas (Cards) */
+    .card-1 {
+        flex-basis: auto !important;
+        margin: 0 auto 70px auto !important; 
+        width: 90% !important;
+    }
+
+    /* 3. El Footer */
+    .link {
+        width: 100% !important;
+        margin-bottom: 40px !important;
+        text-align: center !important;
+    }
+
+    /* 4. Imágenes (La hamburguesa del medio) */
+    .header-img img, img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-top: 20px !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+
+
