@@ -65,6 +65,54 @@ img {
 .menu .navbar ul li a:hover {
     color: #E22717;
 }
+/* ── CARRITO ÍCONO ── */
+.cart-icon-wrap {
+  position: relative;
+}
+
+.cart-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f0ece8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+}
+
+.cart-icon-btn:hover {
+  background: #252121;
+}
+
+.cart-icon-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #c0392b;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
 
 #menu {
     display: none;
@@ -237,341 +285,196 @@ h2 {
     display: none;
 }
 
-/* ============================================================
-   SECCIÓN CONTACTO (ARRIBA DEL FOOTER) - RESTAURADA
-   ============================================================ */
-
+/* =============================
+   SECCIÓN CTA - CONTACTO
+============================= */
 .Contact {
-    background-color: #000000; /* Fondo negro de la sección superior */
-    padding: 60px 0;
-    width: 100%;
+  background-color: #111;
+  text-align: center;
+  padding: 60px 20px 80px;
+  font-family: 'Montserrat', sans-serif;
 }
-
-/* Usamos la clase exacta de tu HTML */
-.Contact-content.container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Todo alineado a la izquierda como la foto */
-    text-align: left;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+ 
 .Contact-content h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-
+ 
 .Contact-content p {
-    font-size: 18px;
-    color: #ffffff;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 800px;
+  color: #cccccc;
+  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
 }
-
-/* Estilo del botón "Hace click aqui" */
+ 
 .btn-1 {
-    display: inline-block;
-    background-color: #e63946; /* Tu color rojo */
-    color: #ffffff;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  background-color: #e03c1f;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
 }
-
+ 
 .btn-1:hover {
-    background-color: #b92e3a; /* Se oscurece un poco al pasar el mouse */
+  background-color: #c0321a;
+  transform: scale(1.05);
 }
-
+ 
+ 
+/* =============================
+   FOOTER
+============================= */
 .footer {
-
-    margin-top: 50px;
-
-    text-align: center;
-
-    padding: 50px 0;
-
-    background-color: #631913;
-
-    color: #ffffff;
-
-}  
-
-
-
-.footercopy {
-
-    margin-top: 10px;
-
-    padding: 10px 0 2px 0;
-
-    background-color: #631913;
-
-    color: #ffffff;
-
-    text-align: left;
-
-    font-size: 10px;
-
+  background-color: #7b1f1f;
+  color: #f0e0e0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 50px 60px 30px;
 }
-
-
-
-
-
+ 
 .footer-content {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: flex-start;
-
-    gap: 50px;
-
-    padding: 0;;
-
-    width: 100%;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  text-align: center;
+  padding-bottom: 30px;
 }
-
-
-
-
-
-.link {
-
-    flex: 1;
-
-    text-align: center;
-
-    padding:  0 20px 20px;
-
-}
-
-
-
-.link ul {
-
-    list-style: none;
-
-    padding: 10px;
-
-    margin: 0;
-
-    list-style: none;
-
-   
-
-}
-
-
-
-
-
-.link h3 {
-
-    margin-top: 10px;
-
-    line-height: 1;
-
-    height: 10px;
-
-    align-items: center;
-
-    font-size: 25px;
-
-    margin-bottom: 15px;
-
-    color: #ffffff;
-
-    justify-content: center;
-
-}
-
-
-
-.redes {
-
-    margin-top: 10px;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding:  0;
-
-    gap: 35px;
-
-}
-
-
-
-.redes ul {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 0;
-
-    margin: 0;
-
-    list-style: none;
-
-    gap: 15px;
-
-
-
-}
-
-
-
-.redes a {
-
-    display: block;
-
-    font-size: 20px;
-
-    line-height: 1.5;
-
-    text-decoration: none;
-
-    color:#040100;
-
-    margin-bottom: 10px;
-
-}
-
-
-
+ 
+/* --- Títulos de cada columna --- */
+.contacto h3,
+.link h3,
 .redes-title {
-
-    margin-top: 0px;
-
-    line-height: 1;
-
-    height: 10px;
-
-    align-items: center;
-
-    font-size: 25px;
-
-    margin-bottom: 30px;
-
-    color: #ffffff;
-
-    justify-content: center;
-
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
 }
-
-
-
-.contacto h3 {
-
-    margin-top: 15px;
-
-    align-items: center;
-
-    font-size: 25px;
-
-    color: #ffffff;
-
-    justify-content: center;
-
-    gap: 10px;
-
+ 
+/* =============================
+   COLUMNA CONTACTO
+============================= */
+.contacto ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-
-
-.contacto p {
-
-    list-style: none;
-
-    padding: 0;
-
-    margin: 20px;
-
-    font-size: 16px;
-
-    color: #040100;
-
-
-
+ 
+.contacto ul li p {
+  font-size: 0.88rem;
+  color: #e8c8c8;
+  line-height: 1.8;
+  margin: 0;
 }
-
-
-
+ 
+ 
+/* =============================
+   COLUMNA SECCIONES
+============================= */
+.link ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+ 
+.link ul li a {
+  color: #e8c8c8;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.25s ease;
+}
+ 
+/* Subrayado animado desde el centro al hacer hover */
+.link ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #ff6b47;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+ 
+.link ul li a:hover {
+  color: #ffffff;
+}
+ 
+.link ul li a:hover::after {
+  width: 100%;
+}
+ 
+ 
+/* =============================
+   COLUMNA REDES SOCIALES
+============================= */
+.redes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+ 
+.redes ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+ 
+.redes ul li a:hover {
+  background-color: #e03c1f;
+  transform: translateY(-3px);
+}
+ 
 .social-icon {
-
-    width: 40px;
-
-    margin-right: 0px;
-
-    transition: transform 0.3s ease;
-
-   
-
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
 }
+ 
+ 
+/* Copyright: Centrado con línea sutil */ 
+.footercopy { 
+    margin-top: 40px; 
+    padding: 20px 0; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    text-align: center; 
+} 
 
+.footercopy p { 
+    font-size: 12px; 
+    color: rgba(255, 255, 255, 0.7); 
+    margin: 0; }
 
-
-.social-icon:hover {
-
-    transform: scale(1.2);
-
-}
-
-.link a {
-
-    display: block;
-
-    font-size: 20px;
-
-    line-height: 1.5;
-
-    text-decoration: none;
-
-    color:#040100;
-
-    margin-bottom: 10px;
-
-   
-
-}
-
-
-
-.link a:hover {
-
-    color: #fff;
-
-}
-
-/* --- 7. Barra Final de Copyright --- */
-.footercopy {
-    margin-top: 40px;
-    padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea sutil divisoria */
-    text-align: center; /* ¡Centradito! */
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7); /* Blanco un poco transparente */
-}
-
-/* Enlaces dentro del copyright (si los tenés) */
-.footercopy a {
-    color: inherit;
-    text-decoration: none;
-}
-
+    
 @media screen and (max-width: 768px) {
     
     /* Evita que el diseño se vea "lejos" o con zoom out */
