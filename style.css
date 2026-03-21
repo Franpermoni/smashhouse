@@ -47,6 +47,14 @@ img {
     font-weight: 700;
     color: #E22717;
     font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
 }
 
 .menu .navbar ul li {
