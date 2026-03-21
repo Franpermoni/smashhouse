@@ -289,90 +289,100 @@ h2 {
 }
 
 /* ============================================================
-   FOOTER - DISEÑO ORIGINAL RESTAURADO
+   ESTILOS DEL FOOTER - CORREGIDOS CON TUS CLASES EXACTAS
    ============================================================ */
 
+/* --- 1. Contenedor Principal de todo el Footer --- */
 .footer {
-    background-color: #631913; /* Fondo bordó */
-    padding: 60px 0 20px 0;
+    margin-top: 50px;
+    padding: 60px 0; /* Espacio arriba y abajo para que respire */
+    background-color: #631913; /* Tu color bordó */
+    color: #ffffff; /* Texto blanco general */
+}
+
+/* --- 2. Contenedor de las Columnas (Flexbox) --- */
+/* (Usamos .footer-content.container para mayor precisión) */
+.footer-content.container {
+    display: flex;
+    justify-content: center; /* Centra las columnas */
+    align-items: flex-start; /* Alinea los títulos arriba */
+    gap: 80px; /* Espacio entre columnas (ajústalo a gusto) */
+    max-width: 1200px; /* Opcional: limita el ancho máximo */
+    margin: 0 auto; /* Centra el bloque entero en la pantalla */
     width: 100%;
 }
 
-.footer-content.container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
+/* --- 3. Estilos de las 3 Columnas (Contacto, Links, Redes) --- */
 .contacto, .link, .redes {
-    flex: 1;
-    text-align: center;
+    flex: 1; /* Hace que las 3 columnas tengan el mismo ancho */
+    text-align: center; /* Centra el contenido internamente */
 }
 
-/* h3 en Blanco Estático */
-.contacto h3, .link h3, .redes-title {
-    color: #ffffff;
+/* Títulos h3 unificados para Contacto y Links */
+.contacto h3, .link h3 {
     font-size: 25px;
-    margin-bottom: 25px;
-    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase; /* Opcional: les da un toque más pro */
 }
 
-/* Información de Contacto en Negro Estático */
-.contacto p {
-    color: #040100;
-    font-size: 16px;
-    margin-bottom: 10px;
+/* --- 4. Título de Redes Sociales (Clase Específica) --- */
+.redes-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
 }
 
-/* Enlaces de Secciones: Negro con Hover a Blanco */
-.link a {
-    color: #040100;
+/* --- 5. Textos y Enlaces - Cambié el color a blanco para que se lea --- */
+/* (En tu HTML, los párrafos y enlaces están dentro de 'contacto' y 'link') */
+.contacto p, .link a {
+    color: #ffffff; /* ¡Importante para el contraste! */
     text-decoration: none;
     font-size: 16px;
-    margin-bottom: 12px;
-    display: block;
-    transition: color 0.3s ease;
+    margin-bottom: 10px;
+    display: block; /* Para que cada link ocupe una línea */
 }
 
+/* Efecto hover para los links de Secciones */
 .link a:hover {
-    color: #ffffff; /* Cambia a blanco al pasar el mouse */
+    text-decoration: underline;
+    color: #ffca28; /* Un toquecito de color amarillo/oro al pasar el mouse */
 }
 
-/* Redes Sociales: Se agrandan pero mantienen el color */
+/* --- 6. Iconos de Redes Sociales --- */
 .redes ul {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: center; /* Centra los iconos */
     list-style: none;
     padding: 0;
+    gap: 20px; /* Espacio entre los iconos */
 }
 
 .social-icon {
-    width: 35px;
+    width: 35px; /* Tamaño de los iconos */
     height: 35px;
-    transition: transform 0.3s ease;
-    filter: brightness(0) invert(1); /* Fuerza a que sean blancos */
+    transition: transform 0.3s ease; /* Efecto suave */
 }
 
 .social-icon:hover {
-    transform: scale(1.25); /* Solo se agranda */
+    transform: scale(1.2); /* Se agrandan un poquito al pasar el mouse */
 }
 
-/* Copyright: Centrado con línea sutil */
+/* --- 7. Barra Final de Copyright --- */
 .footercopy {
     margin-top: 40px;
     padding: 20px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea sutil divisoria */
+    text-align: center; /* ¡Centradito! */
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7); /* Blanco un poco transparente */
 }
 
-.footercopy p {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
+/* Enlaces dentro del copyright (si los tenés) */
+.footercopy a {
+    color: inherit;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
