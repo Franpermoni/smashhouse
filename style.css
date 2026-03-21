@@ -52,10 +52,10 @@ img {
   gap: 10px;
 }
 .logo img {
-  width: 120px;
-  height: 70px;
+  width: 200px;
+  height: 100px;
   object-fit: contain;
-  max-width: 120px;
+  max-width: 200px;
 }
 
 .menu .navbar ul li {
