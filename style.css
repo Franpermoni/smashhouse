@@ -288,84 +288,272 @@ h2 {
     background-color: #b92e3a; /* Se oscurece un poco al pasar el mouse */
 }
 
-/* ============================================================
-   ESTILOS DEL FOOTER - CORREGIDOS CON TUS CLASES EXACTAS
-   ============================================================ */
-
-/* --- 1. Contenedor Principal de todo el Footer --- */
 .footer {
+
     margin-top: 50px;
-    padding: 60px 0; /* Espacio arriba y abajo para que respire */
-    background-color: #631913; /* Tu color bordó */
-    color: #ffffff; /* Texto blanco general */
-}
 
-/* --- 2. Contenedor de las Columnas (Flexbox) --- */
-/* (Usamos .footer-content.container para mayor precisión) */
-.footer-content.container {
-    display: flex;
-    justify-content: center; /* Centra las columnas */
-    align-items: flex-start; /* Alinea los títulos arriba */
-    gap: 80px; /* Espacio entre columnas (ajústalo a gusto) */
-    max-width: 1200px; /* Opcional: limita el ancho máximo */
-    margin: 0 auto; /* Centra el bloque entero en la pantalla */
-    width: 100%;
-}
+    text-align: center;
 
-/* --- 3. Estilos de las 3 Columnas (Contacto, Links, Redes) --- */
-.contacto, .link, .redes {
-    flex: 1; /* Hace que las 3 columnas tengan el mismo ancho */
-    text-align: center; /* Centra el contenido internamente */
-}
+    padding: 50px 0;
 
-/* Títulos h3 unificados para Contacto y Links */
-.contacto h3, .link h3 {
-    font-size: 25px;
-    margin-bottom: 20px;
+    background-color: #631913;
+
     color: #ffffff;
-    text-transform: uppercase; /* Opcional: les da un toque más pro */
+
+}  
+
+
+
+.footercopy {
+
+    margin-top: 10px;
+
+    padding: 10px 0 2px 0;
+
+    background-color: #631913;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 10px;
+
 }
 
-/* --- 4. Título de Redes Sociales (Clase Específica) --- */
-.redes-title {
-    font-size: 25px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
 
-/* --- 5. Textos y Enlaces - Cambié el color a blanco para que se lea --- */
-/* (En tu HTML, los párrafos y enlaces están dentro de 'contacto' y 'link') */
-.contacto p, .link a {
-    color: #ffffff; /* ¡Importante para el contraste! */
-    text-decoration: none;
-    font-size: 16px;
-    margin-bottom: 10px;
-    display: block; /* Para que cada link ocupe una línea */
-}
 
-/* Efecto hover para los links de Secciones */
-.link a:hover {
-    text-decoration: underline;
-    color: #ffca28; /* Un toquecito de color amarillo/oro al pasar el mouse */
-}
 
-/* --- 6. Iconos de Redes Sociales --- */
-.redes ul {
+
+.footer-content {
+
     display: flex;
-    justify-content: center; /* Centra los iconos */
-    list-style: none;
-    padding: 0;
-    gap: 20px; /* Espacio entre los iconos */
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 100px;
+
+    padding: 0;;
+
+    width: 100%;
+
 }
+
+
+
+
+
+.link {
+
+    flex: 1;
+
+    text-align: center;
+
+    padding:  0 20px 20px;
+
+}
+
+
+
+.link ul {
+
+    list-style: none;
+
+    padding: 10px;
+
+    margin: 0;
+
+    list-style: none;
+
+   
+
+}
+
+
+
+
+
+.link h3 {
+
+    margin-top: 10px;
+
+    line-height: 1;
+
+    height: 10px;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    justify-content: center;
+
+}
+
+
+
+.redes {
+
+    margin-top: 10px;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:  0;
+
+    gap: 35px;
+
+}
+
+
+
+.redes ul {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+    gap: 15px;
+
+
+
+}
+
+
+
+.redes a {
+
+    display: block;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    color:#040100;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.redes-title {
+
+    margin-top: 0px;
+
+    line-height: 1;
+
+    height: 10px;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+
+    color: #ffffff;
+
+    justify-content: center;
+
+}
+
+
+
+.contacto h3 {
+
+    margin-top: 15px;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    color: #ffffff;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+
+.contacto p {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 20px;
+
+    font-size: 16px;
+
+    color: #040100;
+
+
+
+}
+
+
 
 .social-icon {
-    width: 35px; /* Tamaño de los iconos */
-    height: 35px;
-    transition: transform 0.3s ease; /* Efecto suave */
+
+    width: 40px;
+
+    margin-right: 0px;
+
+    transition: transform 0.3s ease;
+
+   
+
 }
 
+
+
 .social-icon:hover {
-    transform: scale(1.2); /* Se agrandan un poquito al pasar el mouse */
+
+    transform: scale(1.2);
+
+}
+
+.link a {
+
+    display: block;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    color:#040100;
+
+    margin-bottom: 10px;
+
+   
+
+}
+
+
+
+.link a:hover {
+
+    color: #fff;
+
 }
 
 /* --- 7. Barra Final de Copyright --- */
