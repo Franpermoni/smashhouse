@@ -73,7 +73,7 @@ img {
 
 .menu .navbar ul li a:hover {
     color: #E22717;
-     text-shadow: 0 0 8px #ff1a1a, 0 0 16px #ff1a1a;
+     text-shadow: 0 0 6px rgba(255, 26, 26, 0.6), 0 0 12px rgba(255, 26, 26, 0.3);
 }
 /* ── CARRITO ÍCONO ── */
 .cart-icon-wrap {
