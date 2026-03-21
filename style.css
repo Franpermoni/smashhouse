@@ -262,17 +262,13 @@ h2 {
 
 .footercopy {
     margin-top: 10px;
-    text-align: center;
-    padding: 10px 0;
+    padding: 10px 0 2px 0;
     background-color: #631913;
     color: #ffffff;
     text-align: left;
     font-size: 12px;
 }
 
-.footercopy p {
-   color: #ffffff;
-}
 
 .footer-content {
     display: flex;
