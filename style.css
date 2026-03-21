@@ -238,97 +238,338 @@ h2 {
 }
 
 /* ============================================================
-   ESTILOS DEL FOOTER - SMASH HOUSE (OPTIMIZADO)
+   SECCIÓN CONTACTO (ARRIBA DEL FOOTER) - RESTAURADA
    ============================================================ */
 
-/* 1. Fondo y Espaciado General */
-.footer {
-    margin-top: 50px;
-    padding: 60px 0 20px 0; /* Más aire arriba, menos abajo por el copyright */
-    background-color: #631913;
-    color: #ffffff;
+.Contact {
+    background-color: #000000; /* Fondo negro de la sección superior */
+    padding: 60px 0;
+    width: 100%;
 }
 
-/* 2. Contenedor Flexbox (Alineación de las 3 columnas) */
-.footer-content.container {
+/* Usamos la clase exacta de tu HTML */
+.Contact-content.container {
     display: flex;
-    justify-content: center; 
-    align-items: flex-start;
-    gap: 60px; /* Espacio entre columnas */
-    width: 90%;
+    flex-direction: column;
+    align-items: flex-start; /* Todo alineado a la izquierda como la foto */
+    text-align: left;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* 3. Estilos de Columnas e Items */
-.contacto, .link, .redes {
-    flex: 1;
-    text-align: center;
-}
-
-/* Títulos de las secciones */
-.contacto h3, 
-.link h3, 
-.redes-title {
-    font-size: 24px;
-    margin-bottom: 25px;
+.Contact-content h2 {
+    font-size: 32px;
     color: #ffffff;
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-/* Listas y Textos (Cambiado a blanco para que se lea bien) */
-.link ul, .redes ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.Contact-content p {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 800px;
 }
 
-.contacto p, 
-.link a, 
-.redes a {
-    color: #ffffff; /* Blanco para resaltar sobre el fondo bordó */
+/* Estilo del botón "Hace click aqui" */
+.btn-1 {
+    display: inline-block;
+    background-color: #e63946; /* Tu color rojo */
+    color: #ffffff;
+    padding: 12px 30px;
     text-decoration: none;
-    font-size: 17px;
-    margin-bottom: 12px;
-    display: block;
-    transition: color 0.3s ease;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por los links */
-.link a:hover {
-    color: #ffca28; /* Color mostaza/oro al pasar el mouse */
+.btn-1:hover {
+    background-color: #b92e3a; /* Se oscurece un poco al pasar el mouse */
 }
 
-/* 4. Iconos de Redes Sociales */
-.redes ul {
+.footer {
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    padding: 50px 0;
+
+    background-color: #631913;
+
+    color: #ffffff;
+
+}  
+
+
+
+.footercopy {
+
+    margin-top: 10px;
+
+    padding: 10px 0 2px 0;
+
+    background-color: #631913;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    font-size: 10px;
+
+}
+
+
+
+
+
+.footer-content {
+
     display: flex;
+
     justify-content: center;
-    gap: 20px;
+
+    align-items: flex-start;
+
+    gap: 50px;
+
+    padding: 0;;
+
+    width: 100%;
+
 }
+
+
+
+
+
+.link {
+
+    flex: 1;
+
+    text-align: center;
+
+    padding:  0 20px 20px;
+
+}
+
+
+
+.link ul {
+
+    list-style: none;
+
+    padding: 10px;
+
+    margin: 0;
+
+    list-style: none;
+
+   
+
+}
+
+
+
+
+
+.link h3 {
+
+    margin-top: 10px;
+
+    line-height: 1;
+
+    height: 10px;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    justify-content: center;
+
+}
+
+
+
+.redes {
+
+    margin-top: 10px;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:  0;
+
+    gap: 35px;
+
+}
+
+
+
+.redes ul {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+    gap: 15px;
+
+
+
+}
+
+
+
+.redes a {
+
+    display: block;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    color:#040100;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.redes-title {
+
+    margin-top: 0px;
+
+    line-height: 1;
+
+    height: 10px;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+
+    color: #ffffff;
+
+    justify-content: center;
+
+}
+
+
+
+.contacto h3 {
+
+    margin-top: 15px;
+
+    align-items: center;
+
+    font-size: 25px;
+
+    color: #ffffff;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+
+.contacto p {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 20px;
+
+    font-size: 16px;
+
+    color: #040100;
+
+
+
+}
+
+
 
 .social-icon {
-    width: 35px;
-    height: auto;
+
+    width: 40px;
+
+    margin-right: 0px;
+
     transition: transform 0.3s ease;
-    filter: brightness(0) invert(1); /* Esto fuerza a que los iconos sean blancos si son negros */
+
+   
+
 }
+
+
 
 .social-icon:hover {
-    transform: scale(1.2) rotate(5deg);
+
+    transform: scale(1.2);
+
 }
 
-/* 5. Barra Final de Copyright (Centrada y Limpia) */
+.link a {
+
+    display: block;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    color:#040100;
+
+    margin-bottom: 10px;
+
+   
+
+}
+
+
+
+.link a:hover {
+
+    color: #fff;
+
+}
+
+/* --- 7. Barra Final de Copyright --- */
 .footercopy {
-    margin-top: 20px;
-    padding: 10px 0 5px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
-    text-align: center;
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.7); /* Blanco suave */
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Una línea sutil divisoria */
+    text-align: center; /* ¡Centradito! */
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7); /* Blanco un poco transparente */
 }
 
-.footercopy p {
-    margin: 0;
-    line-height: 1.2;
+/* Enlaces dentro del copyright (si los tenés) */
+.footercopy a {
+    color: inherit;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
