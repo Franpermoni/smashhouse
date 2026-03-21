@@ -237,98 +237,84 @@ h2 {
     display: none;
 }
 
+.Contact { /* Asegurate de que el nombre de la clase coincida con tu HTML */
+    display: flex;
+    flex-direction: column; /* Alinea los elementos uno abajo del otro */
+    align-items: center;    /* Centra horizontalmente el texto y el botón */
+    text-align: center;     /* Asegura que las líneas de texto se centren */
+    padding: 60px 20px;     /* Dale aire arriba y abajo */
+    width: 100%;
+}
+
+.Contact p {
+    max-width: 800px;       /* Evita que el texto se estire demasiado a los costados */
+    margin-bottom: 30px;    /* Separa el texto del botón rojo */
+}
+
 /* ============================================================
    ESTILOS DEL FOOTER - SMASH HOUSE (OPTIMIZADO)
    ============================================================ */
 
-/* 1. Fondo y Espaciado General */
+/* FOOTER COMPLETO */
 .footer {
-    margin-top: 50px;
-    padding: 60px 0 20px 0; /* Más aire arriba, menos abajo por el copyright */
     background-color: #631913;
-    color: #ffffff;
+    padding: 50px 0 20px 0;
+    margin-top: 50px;
+    width: 100%;
 }
 
-/* 2. Contenedor Flexbox (Alineación de las 3 columnas) */
 .footer-content.container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: flex-start;
-    gap: 60px; /* Espacio entre columnas */
-    width: 90%;
-    margin: 0 auto;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto; /* El 40px abajo separa las columnas de la línea */
 }
 
-/* 3. Estilos de Columnas e Items */
-.contacto, .link, .redes {
-    flex: 1;
+/* Títulos y textos del footer */
+.contacto h3, .link h3, .redes-title {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-/* Títulos de las secciones */
-.contacto h3, 
-.link h3, 
-.redes-title {
-    font-size: 24px;
-    margin-bottom: 25px;
+.contacto p, .link a {
     color: #ffffff;
-    font-weight: bold;
-}
-
-/* Listas y Textos (Cambiado a blanco para que se lea bien) */
-.link ul, .redes ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contacto p, 
-.link a, 
-.redes a {
-    color: #ffffff; /* Blanco para resaltar sobre el fondo bordó */
     text-decoration: none;
-    font-size: 17px;
-    margin-bottom: 12px;
+    font-size: 16px;
+    margin-bottom: 10px;
     display: block;
-    transition: color 0.3s ease;
+    text-align: center;
 }
 
-/* Efecto al pasar el mouse por los links */
-.link a:hover {
-    color: #ffca28; /* Color mostaza/oro al pasar el mouse */
-}
-
-/* 4. Iconos de Redes Sociales */
+/* Iconos de Redes */
 .redes ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .social-icon {
     width: 35px;
-    height: auto;
-    transition: transform 0.3s ease;
-    filter: brightness(0) invert(1); /* Esto fuerza a que los iconos sean blancos si son negros */
+    /* Si tus iconos son negros, esto los hace blancos */
+    filter: brightness(0) invert(1); 
 }
 
-.social-icon:hover {
-    transform: scale(1.2) rotate(5deg);
-}
-
-/* 5. Barra Final de Copyright (Centrada y Limpia) */
+/* COPYRIGHT FINAL */
 .footercopy {
-    margin-top: 20px;
-    padding: 10px 0 5px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
     text-align: center;
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.7); /* Blanco suave */
 }
 
 .footercopy p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
     margin: 0;
-    line-height: 1.2;
 }
 
 @media screen and (max-width: 768px) {
