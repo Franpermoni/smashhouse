@@ -113,6 +113,9 @@ img {
   justify-content: center;
   padding: 0 4px;
 }
+#cart-toggle {
+  display: none;
+}
 
 #menu {
     display: none;
