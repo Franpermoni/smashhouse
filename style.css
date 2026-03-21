@@ -555,6 +555,7 @@ h2 {
   box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
   z-index: 999;
   transition: transform .2s, box-shadow .2s;
+  overflow: hidden;
 }
 
 .whatsapp-btn:hover {
@@ -565,6 +566,7 @@ h2 {
 .whatsapp-btn img {
   width: 32px;
   height: 32px;
+  object-fit: contain;
 }
 
 
