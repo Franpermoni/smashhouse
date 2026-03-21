@@ -426,6 +426,7 @@ h2 {
     color: rgba(255, 255, 255, 0.7); 
     margin: 0; }
 
+    
 @media screen and (max-width: 768px) {
     
     /* Evita que el diseño se vea "lejos" o con zoom out */
