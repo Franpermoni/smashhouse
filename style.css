@@ -344,7 +344,9 @@ h2 {
 }
  
 .btn-1:hover {
+  background-color: #fff;
   transform: scale(1.05);
+  color: #e03c1f !important;
 }
  
  
