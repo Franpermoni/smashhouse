@@ -302,7 +302,7 @@ h2 {
 }
 
 .ocultarproductos {
-   |
+  display: none;
 }
 
 /* =============================
