@@ -335,13 +335,11 @@ h2 {
   font-weight: 600;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
   display: inline-block;
 }
  
 .btn-1:hover {
-  
   transform: scale(1.05);
 }
  
