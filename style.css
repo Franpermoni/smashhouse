@@ -331,27 +331,6 @@ h2 {
   line-height: 1.7;
 }
  
-.btn-1 {
-  background-color: #e03c1f;
-  color: #fff;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  display: inline-block;
-}
- 
-.btn-1:hover {
-  background-color: #fff;
-  transform: scale(1.05);
-  color: #e03c1f !important;
-}
- 
- 
 /* =============================
    FOOTER
 ============================= */
