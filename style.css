@@ -251,7 +251,10 @@ h2 {
 .burgaspng:hover {
    transform: scale(1.2);
 }
-
+.burgasocultas {
+  display: none;
+  
+}
 .app-txt {
     flex-basis: 50%;
     text-align: center;
