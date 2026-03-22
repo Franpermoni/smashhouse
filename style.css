@@ -180,6 +180,7 @@ p {
 
 .btn-1:hover {
     background-color: #ffffff;
+    color: #fff !important;
 }
 
 .header-img {
