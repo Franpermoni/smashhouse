@@ -47,6 +47,15 @@ img {
     font-weight: 700;
     color: #E22717;
     font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 225px;
+  height: 100px;
+  object-fit: contain;
+  max-width: 225px;
 }
 
 .menu .navbar ul li {
@@ -64,6 +73,60 @@ img {
 
 .menu .navbar ul li a:hover {
     color: #E22717;
+     text-shadow: 0 0 6px rgba(255, 26, 26, 0.6), 0 0 12px rgba(255, 26, 26, 0.3);
+}
+/* ── CARRITO ÍCONO ── */
+.cart-icon-wrap {
+   position: fixed;
+  top: 12px;
+  right: 20px;
+  z-index: 999;
+}
+
+.cart-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f0ece8;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 8px;
+  font-size: 24px !important;
+}
+
+.cart-icon-btn:hover {
+  background: #252121;
+}
+
+.cart-icon-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #c0392b;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+#cart-toggle {
+  display: none;
 }
 
 #menu {
@@ -487,6 +550,33 @@ h2 {
         margin-top: 20px !important;
         margin-bottom: 30px !important;
     }
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform .2s, box-shadow .2s;
+  overflow: hidden;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-btn img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 
