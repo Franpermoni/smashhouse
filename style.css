@@ -117,7 +117,6 @@ p {
 
 .btn-1:hover {
     background-color: #ffffff;
-    color: #E22717;
 }
 
 .header-img {
@@ -241,6 +240,7 @@ h2 {
    SECCIÓN CTA - CONTACTO
 ============================= */
 .Contact {
+    display: flex;
   background-color: #111;
   text-align: center;
   padding: 60px 20px 80px;
@@ -426,7 +426,7 @@ h2 {
     color: rgba(255, 255, 255, 0.7); 
     margin: 0; }
 
-    
+
 @media screen and (max-width: 768px) {
     
     /* Evita que el diseño se vea "lejos" o con zoom out */
