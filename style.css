@@ -27,7 +27,7 @@ img {
     display: flex;
     align-items: center;
     min-height: 80vh;
-    padding: 200px 0 0 0; 
+    padding: 250px 0 50px 0; 
 }
 
 .menu  {
@@ -145,7 +145,7 @@ img {
 .header-content {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .header-txt {
@@ -191,11 +191,12 @@ p {
 .header-img {
     text-align: right;
     flex-basis: 50%;
-    margin
 }
 
 .header-img img {
-    width: 850px;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
 }
 
 
