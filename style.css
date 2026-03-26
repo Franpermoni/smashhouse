@@ -576,7 +576,7 @@ h2 {
     /* 5. Carrito de compras */
     .cart-icon-wrap {
     position: fixed;
-    top: 48px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
+    top: 55px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
     right: 20px;
     z-index: 999;
    }
@@ -585,7 +585,6 @@ h2 {
     .navbar ul {
         justify-content: center !important;
         display: flex !important;
-        flex-direction: column !important;
         align-items: center !important;
     }
 }
