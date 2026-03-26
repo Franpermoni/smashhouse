@@ -82,7 +82,7 @@ img {
 }
 /* ── CARRITO ÍCONO ── */
 .cart-icon-wrap {
-   position: fixed;
+   position: relative;
   top: 12px;
   right: 20px;
   z-index: 999;
