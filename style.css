@@ -594,6 +594,15 @@ h2 {
         padding: 8px 10px !important;      /* ← reduce el padding para que entren mejor */
         font-size: 14px !important;        /* ← achica un poco la fuente */
     }
+  /*7. Wpp y footer icons*/
+  .redes ul {
+    justify-content: center !important;
+  }
+
+  .whatsapp-btn {
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
 }
 
 
