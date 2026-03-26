@@ -493,7 +493,7 @@ h2 {
 
    /* 1. BAJAR TODO EL HEADER (Para que no choque con el logo) */
     .header-txt {
-        margin-top: 80px !important;    /* Espacio hacia arriba (el menú) */
+        margin-top: 180px !important;    /* Espacio hacia arriba (el menú) */
         margin-bottom: 60px !important; /* Espacio hacia abajo (el contacto) */
         display: block !important;
         font-size: 28px !important;
