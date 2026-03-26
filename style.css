@@ -526,6 +526,7 @@ h2 {
         display: block !important;
         font-size: 28px !important;
         line-height: 1.3 !important;
+        text-align: center !important; 
     }
 
     /* SEPARACIÓN INTERNA (Título vs Párrafo/Contacto) */
@@ -575,7 +576,7 @@ h2 {
     /* 5. Carrito de compras */
     .cart-icon-wrap {
     position: fixed;
-    top: 37px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
+    top: 42px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
     right: 20px;
     z-index: 999;
    }
