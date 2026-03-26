@@ -575,7 +575,7 @@ h2 {
     /* 5. Carrito de compras */
     .cart-icon-wrap {
     position: fixed;
-    top: 18px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
+    top: 33px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
     right: 20px;
     z-index: 999;
    }
