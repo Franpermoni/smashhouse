@@ -27,7 +27,7 @@ img {
     display: flex;
     align-items: center;
     min-height: 80vh;
-    padding: 350px 0 100px 0; 
+    padding: 200px 0 0 0; 
     margin-top: 100px;
 }
 
@@ -146,7 +146,7 @@ img {
 .header-content {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .header-txt {
