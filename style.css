@@ -595,15 +595,22 @@ h2 {
         font-size: 14px !important;        /* ← achica un poco la fuente */
     }
   /*7. Wpp y footer icons*/
-  .redes ul {
-    justify-content: center !important;
-  }
+  .redes ul li a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
 
-  .whatsapp-btn {
-    right: 50% !important;
-    transform: translateX(50%) !important;
-  }
+    .social-icon {
+        margin: 0 auto !important;
+    }
+
+    .whatsapp-btn img {
+        display: block !important;
+        margin: 0 auto !important;
+    }
 }
+
 
 
 
