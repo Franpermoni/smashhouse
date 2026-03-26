@@ -576,7 +576,7 @@ h2 {
     /* 5. Carrito de compras */
     .cart-icon-wrap {
     position: fixed;
-    top: 56px;      
+    top: 58px;      
     right: 20px;
     z-index: 999;
    }
