@@ -616,6 +616,14 @@ h2 {
     gap: 40px !important;               
     padding: 60px 20px !important;      
    }
+   .burgers-img, .nosotrospng {
+    height: 200px !important;    /* ← era 350px, achicamos la altura */
+    width: 100% !important;
+  }
+
+  .burgers, .nosotros-information {
+    max-width: 320px !important;  /* ← limita el ancho de cada card */
+  }
 }
 
 
