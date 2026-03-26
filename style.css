@@ -576,18 +576,26 @@ h2 {
     /* 5. Carrito de compras */
     .cart-icon-wrap {
     position: fixed;
-    top: 55px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
+    top: 56px;      /* ← ajustá hasta que quede alineado con el logo en mobile */
     right: 20px;
     z-index: 999;
    }
 
    /*6. Navbar*/
-    .navbar ul {
-        justify-content: center !important;
+      .navbar ul {
         display: flex !important;
+        flex-wrap: wrap !important;        /* ← permite que los links bajen a la siguiente línea */
+        justify-content: center !important;
         align-items: center !important;
+        gap: 5px !important;
+    }
+
+    .menu .navbar ul li a {
+        padding: 8px 10px !important;      /* ← reduce el padding para que entren mejor */
+        font-size: 14px !important;        /* ← achica un poco la fuente */
     }
 }
+
 
 
 
