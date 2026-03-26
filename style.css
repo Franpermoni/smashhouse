@@ -472,7 +472,7 @@ h2 {
 /* Copyright: Centrado con línea sutil */ 
 .footercopy { 
     margin-top: 30px; 
-    padding: 10px 0; 
+    padding: 20px 0 10px 0; 
     border-top: 1px solid rgba(255, 255, 255, 0.1); 
     text-align: center; 
 } 
