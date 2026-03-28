@@ -12,16 +12,21 @@
         display: flex !important;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: stretch;
         gap: 30px;
         padding: 120px 20px 60px;
     }
 
     .burgasocultas {
-        display: block !important;
-        width: 280px;
-        text-align: center;
-        padding: 20px;
-    }
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
 
     .cart-icon-wrap {
     position: fixed;
@@ -51,9 +56,11 @@
     }
 
     .burgasocultas p {
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin-bottom: 16px;
+    flex-grow: 1;              /* ← empuja el precio y botón siempre al fondo */
+}
 
     .precio {
     display: inline-block;
