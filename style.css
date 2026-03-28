@@ -618,7 +618,21 @@ h2 {
   .burgers, .nosotros-information {
     max-width: 320px !important;  /* ← limita el ancho de cada card */
   }
+      .ocultarproductos {
+        padding: 100px 20px 40px !important;
+        gap: 20px !important;
+    }
+
+    .burgasocultas {
+        width: 85% !important;    /* ← ocupa casi todo el ancho pero no todo */
+        max-width: 340px !important;
+    }
+
+    .burgaspng {
+        height: 180px !important;
+    }
 }
+
 
 
 
