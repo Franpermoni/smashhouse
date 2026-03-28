@@ -560,7 +560,7 @@ h2 {
     }
 
     /* 4. Imágenes (La hamburguesa del medio) */
-    .header-img img, img {
+    .header-img img {
         max-width: 100% !important;
         height: auto !important;
         margin-top: 20px !important;
