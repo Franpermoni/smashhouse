@@ -18,79 +18,79 @@
     }
 
     .burgasocultas {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    width: 280px;
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-    .cart-icon-wrap {
-    position: fixed;
-    top: 32px;       /* ← ajustá este número hasta que quede alineado */
-    right: 20px;
-    z-index: 999;
-   }
-
-    .burgasocultas .btn-1 {
-    width: 100%;
-    margin-top: 16px;     /* ← separa el botón de la descripción */
-    background-color: transparent;   /* ← fondo transparente */
-    border: 2px solid #e03c1f;       /* ← borde rojo */
-    color: #e03c1f !important;       /* ← texto rojo */
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 280px;
+        background-color: #1a1a1a;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
     }
 
-   .burgasocultas .btn-1:hover {
-    background-color: #e03c1f;
-    color: #fff !important;
+    .cart-icon-wrap {
+        position: fixed;
+        top: 32px;
+        right: 20px;
+        z-index: 999;
+    }
+
+    .burgasocultas .btn-1 {
+        width: 100%;
+        margin-top: 16px;
+        background-color: transparent;
+        border: 2px solid #e03c1f;
+        color: #e03c1f !important;
+    }
+
+    .burgasocultas .btn-1:hover {
+        background-color: #e03c1f;
+        color: #fff !important;
     }
 
     .burgaspng {
-        width: 280px !important;
-        height: 220px !important;
+        width: 100%;          /* ← sin !important para que el media query lo pueda pisar */
+        height: 220px;        /* ← sin !important */
         object-fit: contain;
         border-radius: 15px;
     }
 
     .burgasocultas p {
-    font-size: 0.85rem;
-    color: #aaaaaa;
-    margin-bottom: 16px;
-    flex-grow: 1;              /* ← empuja el precio y botón siempre al fondo */
-}
+        font-size: 0.85rem;
+        color: #aaaaaa;
+        margin-bottom: 16px;
+        flex-grow: 1;
+    }
 
     .precio {
-    display: inline-block;
-    background-color: #e03c1f;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 12px;
+        display: inline-block;
+        background-color: #e03c1f;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 4px 14px;
+        border-radius: 20px;
+        margin-bottom: 12px;
     }
 
     @media screen and (max-width: 768px) {
-    .ocultarproductos {
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 100px 20px 40px !important;
-    }
+        .ocultarproductos {
+            flex-direction: column !important;
+            align-items: center !important;
+            padding: 100px 20px 40px !important;
+        }
 
-    .burgasocultas {
-        width: 90% !important;     /* ← ocupa el ancho de la pantalla */
-        max-width: 340px !important;
-    }
+        .burgasocultas {
+            width: 90% !important;
+            max-width: 340px !important;
+        }
 
-    .burgaspng {
-        width: 100% !important;
-        height: 180px !important;
+        .burgaspng {
+            width: 100% !important;
+            height: 180px !important;
+            object-fit: contain !important;
+        }
     }
-    }
-
 </style>
 </head>
 <body>
