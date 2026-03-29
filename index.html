@@ -28,12 +28,31 @@
                 <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>    
-        <div class="cart-icon-wrap">
-            <label class="cart-icon-btn" for="cart-toggle" title="Ver carrito">
-                🛒
-            </label>
-          <div class="cart-badge" style="display:none;">0</div>
+
+            <!-- Aqui tenemos el carrito, con un icono de carrito y una tabla para mostrar los productos que se agregan al carrito -->
+        <div class="carrito-panel" id="carrito-panel">
+          <div class="carrito-header">
+            <h3>Tu Carrito</h3>
+             <button class="cerrar-carrito" id="cerrar-carrito">✕</button>
         </div>
+          <table id="lista-carrito">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+              </tr>
+            </thead>
+             <tbody id="carrito-body">
+             </tbody>
+            </table>
+    <div class="carrito-total">
+        <p>Total: <span id="total">$0</span></p>
+        <button class="btn-1" id="vaciar-carrito">Vaciar Carrito</button>
+    </div>
+  </div>
+  
     </div>       
     
         <!--  En esta seccion tenemos el titulo y la imagen principal (El mas vendido y la descripcion de la burger mas vendida) -->
