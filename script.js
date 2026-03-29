@@ -76,3 +76,18 @@ document.querySelector('#vaciar-carrito').addEventListener('click', function() {
 
 // Actualizamos el carrito al cargar la página
 actualizarCarrito()
+
+// ANIMACIONES AL HACER SCROLL
+const elementos = document.querySelectorAll('.animar')
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+        }
+    })
+}, { threshold: 0.1 })
+
+elementos.forEach(function(el) {
+    observer.observe(el)
+})
