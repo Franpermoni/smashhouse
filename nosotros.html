@@ -150,7 +150,14 @@
              .cart-icon-wrap {
                 top: 56px;    
             }
-        }
+            .carrito-panel {
+               width: 100%;        /* ← ocupa toda la pantalla en mobile */
+               right: -100%;       /* ← empieza escondido fuera de la pantalla */
+            }
+            .carrito-panel.abierto {
+               right: 0;
+            }
+           }
     </style>
 </head>
 <body>

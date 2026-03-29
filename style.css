@@ -504,6 +504,125 @@ h2 {
   object-fit: contain;
 }
 
+/* =============================
+   PANEL CARRITO
+============================= */
+.carrito-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;        /* ← empieza escondido fuera de la pantalla */
+    width: 380px;
+    height: 100%;
+    background-color: #1a1a1a;
+    z-index: 1000;
+    padding: 30px 20px;
+    transition: right 0.3s ease;  /* ← animación al abrir/cerrar */
+    overflow-y: auto;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.5);
+}
+
+/* Cuando tiene la clase "abierto" se muestra */
+.carrito-panel.abierto {
+    right: 0;
+}
+
+/* Header del carrito */
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.carrito-header h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.cerrar-carrito {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.cerrar-carrito:hover {
+    color: #e03c1f;
+}
+
+/* Tabla del carrito */
+#lista-carrito {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#lista-carrito th {
+    color: #aaaaaa;
+    font-size: 0.8rem;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#lista-carrito td {
+    padding: 12px 0;
+    color: #fff;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    vertical-align: middle;
+}
+
+#lista-carrito td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Botón eliminar item */
+.btn-eliminar {
+    background-color: #e03c1f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0321a;
+}
+
+/* Total y botón vaciar */
+.carrito-total {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.carrito-total p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.carrito-total span {
+    color: #e03c1f;
+}
+
 
 @media screen and (max-width: 768px) {
     
@@ -633,6 +752,14 @@ h2 {
         width: 100% !important;
         height: 180px !important;
         object-fit: contain !important;
+    }
+    .carrito-panel {
+        width: 100%;        /* ← ocupa toda la pantalla en mobile */
+        right: -100%;       /* ← empieza escondido fuera de la pantalla */
+    }
+
+    .carrito-panel.abierto {
+        right: 0;
     }
 }
 
