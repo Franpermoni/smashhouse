@@ -89,7 +89,7 @@ document.querySelector('#vaciar-carrito').addEventListener('click', function() {
 })
 
 // Cargamos el carrito desde localStorage al abrir la página
-let carrito = JSON.parse(localStorage.getItem('carrito')) || []
+carrito = JSON.parse(localStorage.getItem('carrito')) || []
 
 // Al actualizar el carrito también lo guardamos
 function actualizarCarrito() {
