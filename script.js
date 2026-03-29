@@ -5,7 +5,7 @@
 // Agarramos los elementos del HTML que necesitamos
 const carritoPanel = document.querySelector('#carrito-panel')
 const cerrarCarrito = document.querySelector('#cerrar-carrito')
-const carritoIcono = document.querySelector('.cart-icon-btn')
+const carritoIcono = document.querySelector('.cart-icon-wrap')
 
 // Cuando hacen click en el ícono 🛒 → abre el panel
 carritoIcono.addEventListener('click', function() {
