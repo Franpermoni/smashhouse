@@ -71,3 +71,29 @@ function actualizarCarrito() {
     cartBadge.textContent = carrito.length
     cartBadge.style.display = carrito.length > 0 ? 'flex' : 'none'
 }
+
+// ================================
+// PASO 4: ELIMINAR PRODUCTOS
+// ================================
+function eliminarProducto(index) {
+    carrito.splice(index, 1)  // elimina 1 elemento en la posición index
+    actualizarCarrito()
+}
+
+// ================================
+// PASO 5: VACIAR CARRITO
+// ================================
+document.querySelector('#vaciar-carrito').addEventListener('click', function() {
+    carrito = []           // vaciamos el array
+    actualizarCarrito()    // actualizamos el panel
+})
+
+// Cargamos el carrito desde localStorage al abrir la página
+let carrito = JSON.parse(localStorage.getItem('carrito')) || []
+
+// Al actualizar el carrito también lo guardamos
+function actualizarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    
+    // ... el resto del código que ya tenés
+}
