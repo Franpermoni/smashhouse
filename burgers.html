@@ -130,34 +130,59 @@
         </div>
     </header>
 
+    <!-- En esta seccion tenemos la parte del carrito que se abre cuando cliqueamos el icono -->
+    <div class="carrito-panel" id="carrito-panel">
+          <div class="carrito-header">
+            <h3>Tu Carrito</h3>
+             <button class="cerrar-carrito" id="cerrar-carrito">✕</button>
+        </div>
+          <table id="lista-carrito">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+              </tr>
+            </thead>
+             <tbody id="carrito-body">
+             </tbody>
+            </table>
+    <div class="carrito-total">
+        <p>Total: <span id="total">$0</span></p>
+        <button class="btn-1" id="vaciar-carrito">Vaciar Carrito</button>
+    </div>
+  </div>
+
     <!-- En esta seccion tenemos la de ocultar productos y seria la parte de burgers -->
     <section class="ocultarproductos">
         <div class="burgasocultas">
+
     <img src="images/c1.png" class="burgaspng" alt="">
     <h2>Cheddar Explosion</h2>
     <p>Doble medallón vacuno, triple cheddar derretido y pan brioche tostado. Para los amantes del queso.</p>
-    <button class="btn-1">$8999</button>
+    <button class="btn-1" data-nombre="Cheddar Explosion" data-precio="8999" data-imagen="images/c1.png" onclick="agregarAlCarrito(this);>$8999</button>
 </div>
 
         <div class="burgasocultas">
             <img src="images/c2.png" class="burgaspng" alt="">
             <h2>Crunch Garden</h2>
             <p>Medallón con cheddar, lechuga, tomate morado y nuggets crujientes. Textura y sabor en cada mordida.</p>
-            <button class="btn-1">$7999</button>
+            <button class="btn-1" data-nombre="Crunch Garden" data-precio="7999" data-imagen="images/c2.png" onclick="agregarAlCarrito(this);">$7999</button>
         </div>
 
         <div class="burgasocultas">
             <img src="images/c3.png" class="burgaspng" alt="">
             <h2>Fuego Ahumado</h2>
             <p>Doble medallón a la parrilla, panceta crocante, cebolla caramelizada y salsa barbacoa ahumada.</p>
-            <button class="btn-1">$9999</button>
+            <button class="btn-1" data-nombre="Fuego Ahumado" data-precio="9999" data-imagen="images/c3.png" onclick="agregarAlCarrito(this);">$9999</button>
         </div>
 
         <div class="burgasocultas">
             <img src="images/c4.png" class="burgaspng" alt="">
             <h2>Huerta Fit</h2>
             <p>Medallón veggie de garbanzos, palta cremosa, rúcula y salsa de yogur en pan integral. Liviana y fresca.</p>
-            <button class="btn-1">$6999</button>
+            <button class="btn-1" data-nombre="Huerta Fit" data-precio="6999" data-imagen="images/c4.png" onclick="agregarAlCarrito(this);">$6999</button>
         </div>
     </section>
 
