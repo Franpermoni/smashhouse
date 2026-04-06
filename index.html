@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,180 +9,299 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- En esta seccion tenemos el header con el menu de navegacion, el titulo y la imagen principal (Smash House) -->
+
+    <!-- ================================
+         HEADER + NAVBAR
+    ================================ -->
     <input type="checkbox" id="cart-toggle">
     <header>
-    <div class="menu container">
-        <a href="#" class="logo"> 
-            <img src="images/smashouse3.png" alt="smashouse"></a>
+        <div class="menu container">
+            <a href="#" class="logo">
+                <img src="images/smashouse3.png" alt="smashouse">
+            </a>
             <input type="checkbox" id="menu">
             <label for="menu">
-                <img class="menu-icono" src="images/menu.png" alt="" >
+                <img class="menu-icono" src="images/menu.png" alt="">
             </label>
             <nav class="navbar">
                 <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="burgers.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#aplicacion">Aplicacion</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#aplicacion">Aplicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
-            </nav>    
-
-            <!-- Aqui tenemos el carrito, con un icono de carrito y una tabla para mostrar los productos que se agregan al carrito -->
-             
+            </nav>
             <div class="cart-icon-wrap">
-                <label class="cart-icon-btn" for="cart-toggle" title="Ver carrito">
-               🛒
-                </label>
-            <div class="cart-badge" style="display:none;">0</div>
+                <label class="cart-icon-btn" for="cart-toggle" title="Ver carrito">🛒</label>
+                <div class="cart-badge" style="display:none;">0</div>
             </div>
-        
-            
+        </div>
 
-    </div>       
-    
-        <!--  En esta seccion tenemos el titulo y la imagen principal (El mas vendido y la descripcion de la burger mas vendida) -->
-        <div class="header-content container">
+        <!-- Hero -->
+        <div class="header-content container" id="inicio">
             <div class="header-txt">
-                <h1>El mas vendido</h1>
-                <p>
-                    Si es la más pedida, por algo será. Nuestra burger estrella combina carne jugosa, ingredientes frescos y una salsa secreta que marca la diferencia. Probala y entendé por qué todos vuelven por esta.
-                </p>
-                <a href="#" class="btn-1"
-                    data-nombre="El Mas Vendido"
-                    data-precio="8999"
-                    data-imagen="images/right.png"
-                    onclick="agregarAlCarrito(this); return false;">
-                 Agregar al carrito
+                <h1>El más vendido</h1>
+                <p>Si es la más pedida, por algo será. Nuestra burger estrella combina carne jugosa,
+                   ingredientes frescos y una salsa secreta que marca la diferencia.</p>
+                <a href="#"
+                   class="btn-1"
+                   data-nombre="El Más Vendido"
+                   data-precio="8999"
+                   data-imagen="images/right.png"
+                   onclick="agregarAlCarrito(this); return false;">
+                    Agregar al carrito
                 </a>
             </div>
             <div class="header-img">
                 <img src="images/right.png" alt="imagen-principal">
             </div>
-        </div>   
-
+        </div>
     </header>
 
-
-    <!-- En esta seccion tenemos la parte del carrito que se abre cuando cliqueamos el icono -->
+    <!-- ================================
+         PANEL CARRITO
+    ================================ -->
     <div class="carrito-panel" id="carrito-panel">
-          <div class="carrito-header">
+        <div class="carrito-header">
             <h3>Tu Carrito</h3>
-             <button class="cerrar-carrito" id="cerrar-carrito">✕</button>
+            <div class="carrito-header-acciones">
+                <button class="btn-vaciar-header" id="vaciar-carrito">Vaciar carrito</button>
+                <button class="cerrar-carrito" id="cerrar-carrito">✕</button>
+            </div>
         </div>
-          <table id="lista-carrito">
+        <table id="lista-carrito">
             <thead>
-              <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th></th>
-              </tr>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Cant.</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
             </thead>
-             <tbody id="carrito-body">
-             </tbody>
-            </table>
-    <div class="carrito-total">
-        <p>Total: <span id="total">$0</span></p>
-        <button class="btn-1" id="vaciar-carrito">Vaciar Carrito</button>
+            <tbody id="carrito-body"></tbody>
+        </table>
+        <div class="carrito-total">
+            <p>Total: <span id="total">$0</span></p>
+            <button class="btn-1 btn-confirmar" id="btn-confirmar-compra">Confirmar compra</button>
+        </div>
     </div>
-  </div>
 
-    <!-- En esta seccion tenemos dos partes, una es la de burgers, con una imagen y un boton para ver las burgers, y la otra es la de nosotros, con una imagen y un boton para ver mas sobre nosotros, ambas partes estan dentro de una seccion llamada post-intro, que es la que se encarga de mostrar estas dos partes en la pagina principal -->
-    <section class="post-intro">
-        <div class="burgers animar">
-            <img src="images/burguers.avif" class="burgers-img" alt="burgerspng">
+    <!-- ================================
+         MODAL CONFIRMAR COMPRA
+    ================================ -->
+    <div class="modal-overlay" id="modal-compra">
+        <div class="modal-box">
+            <button class="modal-cerrar" id="modal-cerrar">✕</button>
+            <h3>Completá tu pedido</h3>
+            <p class="modal-subtitulo">Ingresá tus datos para confirmar la compra.</p>
+            <form
+                action="https://formspree.io/f/REEMPLAZA_CON_TU_ID"
+                method="POST"
+                class="modal-form"
+                id="form-compra">
+                <input type="hidden" name="tipo" value="Pedido de compra">
+                <div id="resumen-pedido-hidden"></div>
+                <div class="form-group">
+                    <label for="compra-nombre">Nombre completo</label>
+                    <input type="text" id="compra-nombre" name="nombre" placeholder="Ej: Juan García" required>
+                </div>
+                <div class="form-group">
+                    <label for="compra-telefono">Teléfono</label>
+                    <input type="tel" id="compra-telefono" name="telefono" placeholder="Ej: 3513001234" required>
+                </div>
+                <div class="form-group">
+                    <label for="compra-direccion">Dirección de entrega</label>
+                    <input type="text" id="compra-direccion" name="direccion" placeholder="Ej: Belgrano 438, Córdoba" required>
+                </div>
+                <div class="form-group">
+                    <label for="compra-notas">Notas adicionales (opcional)</label>
+                    <textarea id="compra-notas" name="notas" placeholder="Ej: Sin cebolla, timbre 2B..."></textarea>
+                </div>
+                <button type="submit" class="btn-1 btn-submit-form">Enviar pedido 🚀</button>
+                <p class="form-ok" id="form-compra-ok" style="display:none;">
+                    ✅ ¡Pedido recibido! Te contactamos pronto.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================================
+         POST-INTRO: BURGERS + NOSOTROS (expandibles)
+    ================================ -->
+    <section class="post-intro" id="post-intro-section">
+
+        <!-- CARD BURGERS -->
+        <div class="expand-card animar" id="productos">
+            <img src="images/burguers.avif" class="expand-card-img" alt="burgerspng">
             <h2>Burgers</h2>
-            <a href="burgers.html" class="btn-1">Ver Burgers</a>
+            <button class="btn-1 btn-expand" data-target="burgers-content">Ver Burgers ▾</button>
+            <div class="expand-content" id="burgers-content">
+                <div class="productos-grid">
+                    <div class="producto-item">
+                        <img src="images/c1.png" alt="Cheddar Explosion">
+                        <h3>Cheddar Explosion</h3>
+                        <p>Doble medallón vacuno, triple cheddar derretido y pan brioche tostado.</p>
+                        <span class="precio-tag">$8999</span>
+                        <button class="btn-1" data-nombre="Cheddar Explosion" data-precio="8999" data-imagen="images/c1.png" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto-item">
+                        <img src="images/c2.png" alt="Crunch Garden">
+                        <h3>Crunch Garden</h3>
+                        <p>Medallón con cheddar, lechuga, tomate morado y nuggets crujientes.</p>
+                        <span class="precio-tag">$7999</span>
+                        <button class="btn-1" data-nombre="Crunch Garden" data-precio="7999" data-imagen="images/c2.png" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto-item">
+                        <img src="images/c3.png" alt="Fuego Ahumado">
+                        <h3>Fuego Ahumado</h3>
+                        <p>Doble medallón a la parrilla, panceta crocante y salsa barbacoa ahumada.</p>
+                        <span class="precio-tag">$9999</span>
+                        <button class="btn-1" data-nombre="Fuego Ahumado" data-precio="9999" data-imagen="images/c3.png" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto-item">
+                        <img src="images/c4.png" alt="Huerta Fit">
+                        <h3>Huerta Fit</h3>
+                        <p>Medallón veggie de garbanzos, palta cremosa, rúcula y salsa de yogur.</p>
+                        <span class="precio-tag">$6999</span>
+                        <button class="btn-1" data-nombre="Huerta Fit" data-precio="6999" data-imagen="images/c4.png" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="nosotros-information animar">
-            <img src="images/nosotros.avif" class="nosotrospng" alt="nostrospng">
+        <!-- CARD NOSOTROS -->
+        <div class="expand-card animar" id="nosotros">
+            <img src="images/nosotros.avif" class="expand-card-img" alt="nosotrospng">
             <h2>Nosotros</h2>
-            <a href="nosotros.html" class="btn-1">Ver Más</a>
+            <button class="btn-1 btn-expand" data-target="nosotros-content">Ver Más ▾</button>
+            <div class="expand-content" id="nosotros-content">
+
+                <div class="nosotros-historia">
+                    <img src="images/nosotros.avif" alt="Historia Smash House">
+                    <div>
+                        <h3>Nuestra Historia</h3>
+                        <p>Smash House nació en 2020 con una idea simple: hacer la mejor hamburguesa de Córdoba.
+                           Lo que empezó como un pequeño local en Belgrano 438 se convirtió en uno de los lugares
+                           más queridos de la ciudad. Cada burger lleva el mismo amor que el primer día.</p>
+                    </div>
+                </div>
+
+                <div class="nosotros-valores">
+                    <div class="valor-card"><span>🥩</span><h4>Calidad</h4><p>Solo usamos carne 100% vacuna y los mejores ingredientes frescos.</p></div>
+                    <div class="valor-card"><span>❤️</span><h4>Pasión</h4><p>Cada burger se hace con dedicación y amor por la cocina.</p></div>
+                    <div class="valor-card"><span>🤝</span><h4>Comunidad</h4><p>Somos parte de Córdoba y queremos devolvérsela a nuestra gente.</p></div>
+                </div>
+
+                <div class="nosotros-equipo">
+                    <div class="equipo-card">
+                        <img src="images/nosotros.avif" alt="Francisco">
+                        <h4>Francisco Permoni</h4>
+                        <p>Fundador & Chef</p>
+                    </div>
+                    <div class="equipo-card">
+                        <img src="images/nosotros.avif" alt="Alejo">
+                        <h4>Alejo Jaime</h4>
+                        <p>Co-fundador & Diseño</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
     </section>
 
-    
-    <!--  En esta seccion tenemos la parte de la app, con una imagen y un texto que invita a descargar la app, con dos iconos para descargarla en android o en mac -->
+    <!-- ================================
+         SECCIÓN: APP
+    ================================ -->
     <section class="app animar" id="aplicacion">
-
         <div class="app-content container animar">
             <div class="app-img">
                 <img src="images/app.png" alt="">
             </div>
-
             <div class="app-txt animar">
-                <h2>Descarga nuestra app</h2>
-                <p>
-                Con nuestra app pedir es más fácil que nunca. Explorá el menú, recibi promociones, personalizá tu hamburguesa y recibí tu pedido donde estés, en pocos minutos.
-                </p>
+                <h2>Descargá nuestra app</h2>
+                <p>Con nuestra app pedir es más fácil que nunca. Explorá el menú, recibí promociones
+                   y recibí tu pedido donde estés.</p>
                 <div class="app-icons animar">
-                    <a href="https://play.google.com/store/apps/details?id=com.whatsapp&hl=es_AR" target="_blank"><img src="images/android.png" alt=""></a>
-                    <a href="https://apps.apple.com/es/app/whatsapp-messenger/id310633997" target="_blank"><img src="images/mac.png" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.whatsapp&hl=es_AR" target="_blank"><img src="images/android.png" alt="Android"></a>
+                    <a href="https://apps.apple.com/es/app/whatsapp-messenger/id310633997" target="_blank"><img src="images/mac.png" alt="iOS"></a>
                 </div>
             </div>
-
         </div>
-
     </section>
 
-    <!-- En esta seccion tenemos la parte de contacto, con un texto que invita a contactarnos para hacer pedidos o reservaciones, y un boton para hacer click y contactarnos -->
+    <!-- ================================
+         SECCIÓN: CONTACTO (formulario real)
+    ================================ -->
     <section class="Contact" id="contacto">
-
         <div class="Contact-content container animar">
-                <h2>Contactanos para reservaciones o pedidos</h2>
-                <p>
-                   ¿Tenés alguna consulta o querés hacer un pedido? Estamos para ayudarte. Podés contactarnos para reservar tu mesa, realizar pedidos o conocer más sobre nuestro menú. Nuestro equipo estará encantado de atenderte y asegurarse de que tengas la mejor experiencia.
-                </p>
-                <a href="https://wa.me/+5493513534795" target="_blank" class="btn-1">Hace click aqui</a>
-            </div>
+            <h2>Contactanos</h2>
+            <p>¿Tenés alguna consulta o querés reservar tu mesa? Completá el formulario y te respondemos a la brevedad.</p>
+            <form
+                action="https://formspree.io/f/REEMPLAZA_CON_TU_ID"
+                method="POST"
+                class="contact-form"
+                id="form-contacto">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contacto-nombre">Tu nombre</label>
+                        <input type="text" id="contacto-nombre" name="nombre" placeholder="Juan García" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contacto-email">Tu email</label>
+                        <input type="email" id="contacto-email" name="email" placeholder="juan@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contacto-mensaje">Tu mensaje</label>
+                    <textarea id="contacto-mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta o reserva acá..." required></textarea>
+                </div>
+                <button type="submit" class="btn-1 btn-submit-form">Enviar mensaje</button>
+                <p class="form-ok" id="form-contacto-ok" style="display:none;">✅ ¡Mensaje enviado! Te respondemos pronto.</p>
+            </form>
+        </div>
     </section>
 
-
-    <!-- En el fooster tenemos toda la parte que seria el ultimo bloque de la pagina donde se encuentra el contacto, las secciones y las redes sociales -->
+    <!-- ================================
+         FOOTER
+    ================================ -->
     <footer class="footer">
         <div class="footer-content container animar">
-
             <div class="contacto">
                 <h3>Contacto</h3>
                 <ul>
-                    <li>
-                        <p>Belgrano 438, Cordoba Argentina <br> Telefono: 3513534798</p>
-                    </li>
+                    <li><p>Belgrano 438, Córdoba Argentina<br>Teléfono: 3513534798</p></li>
                 </ul>
             </div>
-            
             <div class="link">
-                <h3>Secciones</h3><ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="burgers.html">Productos</a></li>
-                    <li><a href="nosotros.html">Nostros</a></li>
-                    <li><a href="#aplicacion">Aplicacion</a></li>
+                <h3>Secciones</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#aplicacion">Aplicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            
             <div class="redes">
-                <h3 class="redes-title">Seguinos</h3><ul>
-                    <li><a href="https://www.instagram.com/franpermoni/" target="_blank" rel="noopener noreferrer">
-                        <img src="images/ig.jpg" alt="Instagram" class="social-icon"></a></li>
-                    <li><a href="https://www.tiktok.com/@franciscopermoni" target="_blank" rel="noopener noreferrer">
-                        <img src="images/tiktok.avif" alt="Tiktok" class="social-icon"></a></li>
-                    <li><a href="https://www.facebook.com/francisco.permoni.9/?locale=es_LA" target="_blank" rel="noopener noreferrer">
-                        <img src="images/fc.jpg" alt="Facebook" class="social-icon"></a></li>
+                <h3 class="redes-title">Seguinos</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/franpermoni/" target="_blank"><img src="images/ig.jpg" alt="Instagram" class="social-icon"></a></li>
+                    <li><a href="https://www.tiktok.com/@franciscopermoni" target="_blank"><img src="images/tiktok.avif" alt="Tiktok" class="social-icon"></a></li>
+                    <li><a href="https://www.facebook.com/francisco.permoni.9/" target="_blank"><img src="images/fc.jpg" alt="Facebook" class="social-icon"></a></li>
                 </ul>
             </div>
         </div>
         <div class="footercopy">
-          <p>&copy; 2026 Smash House Burger. Diseño y desarollo: Francisco Permoni, Alejo Jaime</a></p>
+            <p>&copy; 2026 Smash House Burger. Diseño y desarrollo: Francisco Permoni, Alejo Jaime</p>
         </div>
     </footer>
-<a href="https://wa.me/+5493513534795" target="_blank" class="whatsapp-btn">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-    
 
+    <a href="https://wa.me/+5493513534795" target="_blank" class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 
 </body>
 </html>
